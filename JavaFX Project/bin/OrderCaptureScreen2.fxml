@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="688.0" prefWidth="831.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.OrderCaptureScreenController">
+   <children>
+      <Pane layoutX="25.0" layoutY="2.0" prefHeight="179.0" prefWidth="807.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Customer Number" />
+            <TextField fx:id="TextFieldCustNo" layoutX="171.0" layoutY="8.0" />
+            <Button fx:id="ButtonDisplayCustDetails" layoutX="409.0" layoutY="8.0" mnemonicParsing="false" onAction="#displayCustomerDetails" prefHeight="39.0" prefWidth="243.0" text="Display Customer Details" />
+            <Text fx:id="txtFieldCustTelNo" layoutX="503.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="142.77539333701134" />
+            <Label layoutX="15.0" layoutY="63.0" text="Customer Information:" />
+            <Text layoutX="171.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="254.0" />
+            <Text fx:id="displayCustName" layoutX="161.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="289.205078125" />
+            <Text fx:id="displayCustCat" layoutX="177.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="190.0" />
+            <Text fx:id="displayCustDelAddr" layoutX="242.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="522.205078125" />
+            <Text fx:id="displayCustTelNo" layoutX="652.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="183.205078125" />
+            <TextArea fx:id="displayCustInfo" layoutX="206.0" layoutY="66.0" prefHeight="106.0" prefWidth="547.0" />
+         </children>
+      </Pane>
+      <GridPane layoutX="29.0" layoutY="197.0" prefHeight="30.0" prefWidth="223.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Order Date" />
+            <DatePicker fx:id="DatePicker" onAction="#getOrderDate" prefHeight="25.0" prefWidth="128.0" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="29.0" layoutY="245.0" prefHeight="163.0" prefWidth="471.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="124.0" minWidth="10.0" prefWidth="124.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.33334350585938" minWidth="10.0" prefWidth="45.33331298828125" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Product ID" />
+            <Label text="Quantity" GridPane.columnIndex="1" />
+            <Label prefHeight="27.0" prefWidth="204.0" text="LineItemSubTOtal" textAlignment="CENTER" GridPane.columnIndex="2" />
+            <TextField fx:id="TextFieldProdID1" GridPane.rowIndex="1" />
+            <TextField fx:id="TextFieldQuant1" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="TextFieldProdID2" GridPane.rowIndex="2" />
+            <TextField fx:id="TextFieldQuant2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="TextFieldProdID3" GridPane.rowIndex="3" />
+            <TextField fx:id="TextFieldQuant3" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="TextFieldProdID4" GridPane.rowIndex="4" />
+            <TextField fx:id="TextFieldQuant4" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="TextFieldProdID5" GridPane.rowIndex="5" />
+            <TextField fx:id="TextFieldQuant5" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Text fx:id="txtFieldLineItemSubTotal1" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="85.47003173828125" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Text fx:id="txtFieldLineItemSubTotal2" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="87.4700927734375" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Text fx:id="txtFieldLineItemSubTotal3" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="91.4700927734375" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Text fx:id="txtFieldLineItemSubTotal4" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="86.80340576171875" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Text fx:id="txtFieldLineItemSubTotal5" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="92.13671875" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="29.0" layoutY="472.0" prefHeight="41.0" prefWidth="461.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="272.0" minWidth="10.0" prefWidth="206.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="158.0" minWidth="0.0" prefWidth="158.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="ButtonGenerateOrderNo" mnemonicParsing="false" onAction="#generateOrderNo" prefHeight="41.0" prefWidth="283.0" text="Generate Order Number" />
+            <Text fx:id="txtFieldOrderNo" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="161.13671875" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="40.0" layoutY="555.0" prefHeight="118.0" prefWidth="368.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="254.0" minWidth="10.0" prefWidth="254.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.66665649414062" minWidth="0.0" prefWidth="19.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="27.0" prefWidth="262.0" text="                           SUB TOAL:" textAlignment="JUSTIFY" />
+            <Label prefHeight="27.0" prefWidth="254.0" text="                                    VAT:" GridPane.rowIndex="1" />
+            <Label prefHeight="27.0" prefWidth="326.0" text="                    GRAND TOTAL:" GridPane.rowIndex="2" />
+            <Label prefHeight="27.0" prefWidth="254.0" text="    DISCOUNTED AMOUNT:" GridPane.rowIndex="3" />
+            <Label prefHeight="27.0" prefWidth="254.0" text="                LOYALTY POINTS:" GridPane.rowIndex="4" />
+            <Label prefHeight="27.0" prefWidth="255.0" text="         TOTAL AMOUNT DUE:" GridPane.rowIndex="5" />
+            <Text fx:id="TextFieldSubTotal" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="83.47006225585938" GridPane.columnIndex="1" />
+            <Text fx:id="TextFieldVAT" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="80.80340576171875" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Text fx:id="TextFieldGrandTotal" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="84.80340576171875" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Text fx:id="TextFieldDiscountedAmount" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="84.80340576171875" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Text fx:id="TextFieldLoyaltyPoints" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="81.47003173828125" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Text fx:id="TextFieldTotalAmountDue" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="84.13671875" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="25.0" layoutY="422.0" prefHeight="30.0" prefWidth="571.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <CheckBox fx:id="checkBoxAccountPayment" mnemonicParsing="false" onAction="#AccountPayment" text="Account Payment" />
+         </children>
+      </GridPane>
+      <Button fx:id="buttonClose" layoutX="697.0" layoutY="614.0" mnemonicParsing="false" onAction="#CloseApplication" prefHeight="25.0" prefWidth="75.0" text="Close" />
+   </children>
+</AnchorPane>
